@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage --collectCoverageFrom='[\"**/*.js\"]' --coverageDirectory='coverage' --watchAll",
+    "test": "CI=true react-scripts test --env=jsdom --coverage --collectCoverageFrom='[\"**/*.js\"]' --coverageDirectory='coverage'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
