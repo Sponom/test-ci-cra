@@ -29,10 +29,12 @@ jobs:
       - run:
           name: Run tests
           command: npm test
-      - store_artifacts:
-          path: coverage
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/results.xml"
       - store_test_results:
-          path: coverage
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
 
 workflows:
   # Below is the definition of your workflow.

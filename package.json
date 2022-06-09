@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "CI=true react-scripts test --env=jsdom --coverage --collectCoverageFrom='[\"**/*.js\"]' --coverageDirectory='coverage'",
+    "test": "react-scripts test --ci --env=jsdom --coverage --collectCoverageFrom='[\"**/*.js\"]' --coverageDirectory='coverage' --reporters=default --reporters='jest-junit'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest-junit": {
+    "output": "./test-results/junit/results.xml"
+  },
+  "devDependencies": {
+    "jest-junit": "^13.2.0"
   }
 }
